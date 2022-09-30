@@ -12,4 +12,8 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants('availability')).not.toContain('Monday');
     expect(handlerElephants()).toBeUndefined();
   });
+  it('Testando 100%', () => {
+    expect(handlerElephants({})).toBe('Parâmetro inválido, é necessário uma string');
+    expect(handlerElephants('Kuro')).toBeNull();
+  });
 });
